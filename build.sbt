@@ -1,12 +1,10 @@
 /* Copyright 2012-2017 Micronautics Research Corporation. */
 
 import sbt._
-
 import sbt.Keys._
 
-organization := "com.micronautics"
-
 name := "html-email"
+organization := "com.micronautics"
 version := "0.1.0"
 organization := "com.micronautics"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
