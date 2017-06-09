@@ -1,4 +1,4 @@
-package com.micronautics.email
+package com.micronautics
 
 import org.apache.commons.mail.HtmlEmail
 

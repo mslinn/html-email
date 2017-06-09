@@ -7,7 +7,7 @@ import sbt.Keys._
 organization := "com.micronautics"
 
 name := "html-email"
-version := "1.0.1"
+version := "0.1.0"
 organization := "com.micronautics"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
