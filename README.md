@@ -15,4 +15,4 @@ Add this to your project's `build.sbt`:
     libraryDependencies += "com.micronautics" %% "html-email" % "0.1.1" withSources()
 
 ## Scaladoc
-[Here](http://blog.mslinn.com/html-email/latest/api/com/micronautics/index.html)
+[Here](http://mslinn.github.io/html-email/latest/api/com/micronautics/index.html)
