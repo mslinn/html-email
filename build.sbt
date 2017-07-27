@@ -9,7 +9,7 @@ version := "0.1.1"
 organization := "com.micronautics"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 crossScalaVersions := Seq("2.11.11", scalaVersion.value)
 
 scalacOptions ++= Seq(
