@@ -5,7 +5,7 @@ import sbt.Keys._
 
 name := "html-email"
 organization := "com.micronautics"
-version := "0.1.1"
+version := "0.1.2"
 organization := "com.micronautics"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
@@ -47,7 +47,7 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.github.pureconfig" %% "pureconfig"    % "0.7.2"  withSources(),
-  "org.apache.commons"    %  "commons-email" % "1.4"    withSources(),
+  "org.apache.commons"    %  "commons-email" % "1.5"    withSources(),
   "org.scalatest"         %% "scalatest"     % "3.0.1"  % "test" withSources(),
   "junit"                 %  "junit"         % "4.12"   % "test"
 )

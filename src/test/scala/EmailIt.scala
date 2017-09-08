@@ -17,5 +17,18 @@ object TestEmail extends App {
                             |<p>Silly Person</p>
                             |""".stripMargin
 
-  emailConfig.smtp.send("mslinn@micronauticsresearch.com", mailCc = Nil, mailBcc = Nil, subjectLine, mailBody)
+  emailConfig.smtp.send(
+    mailTo = "mslinn@micronauticsresearch.com",
+    mailCc = List("mslinn@gmail.com"),
+    mailBcc = List("mslinn@mslinn.com"),
+    subjectLine,
+    mailBody
+  )
+  emailConfig.smtp.send(
+    mailTo = "Mike Slinn <mslinn@micronauticsresearch.com>",
+    mailCc = List("Joe Blow <mslinn@gmail.com>"),
+    mailBcc = List("Jane Doe <mslinn@mslinn.com>"),
+    subjectLine,
+    mailBody
+  )
 }
