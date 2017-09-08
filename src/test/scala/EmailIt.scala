@@ -1,6 +1,6 @@
 import com.micronautics.{EMailConfig, Smtp}
 
-object TestEmail extends App {
+object EmailIt extends App {
   val subjectLine = s"Test email"
   val emailLogoUrl = "http://siteassets.scalacourses.com/images/ScalaCoursesHeadingLogo371x56.png"
   val smtp = Smtp.apply.smtp.copy(
