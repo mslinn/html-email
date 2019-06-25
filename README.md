@@ -15,7 +15,7 @@ Add this to your project's `build.sbt`:
 
     resolvers += "micronautics/scala on bintray" at "http://dl.bintray.com/micronautics/scala"
 
-    libraryDependencies += "com.micronautics" %% "html-email" % "0.1.2" withSources()
+    libraryDependencies += "com.micronautics" %% "html-email" % "0.2.0" withSources()
 
 ## Scaladoc
 [Here](http://mslinn.github.io/html-email/latest/api/com/micronautics/index.html)

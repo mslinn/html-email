@@ -1,6 +1,6 @@
 import com.micronautics.{EMailConfig, Smtp}
 
-object EmailIt extends App {
+object EmailItTest extends App {
   val subjectLine = s"Test email"
   val emailLogoUrl = "http://siteassets.scalacourses.com/images/ScalaCoursesHeadingLogo371x56.png"
   val smtp = Smtp.apply.smtp.copy(
@@ -17,14 +17,19 @@ object EmailIt extends App {
                             |<p>Silly Person</p>
                             |""".stripMargin
 
-  emailConfig.smtp.send(
-    mailTo = "mslinn@micronauticsresearch.com",
-    mailCc = List("mslinn@gmail.com"),
-    mailBcc = List("mslinn@mslinn.com"),
-    subjectLine,
-    mailBody
-  )
-  emailConfig.smtp.send(
+  val fakeConfig =
+    emailConfig
+      .smtp
+      .copy(smtpFrom = "mslinn@scalacourses.com", smtpHostName="scalacourses.com")
+
+  fakeConfig.send(
+      mailTo = "mslinn@micronauticsresearch.com",
+      mailCc = List("mslinn@gmail.com"),
+      mailBcc = List("mslinn@mslinn.com"),
+      subjectLine,
+      mailBody
+    )
+  fakeConfig.send(
     mailTo = "Mike Slinn <mslinn@micronauticsresearch.com>",
     mailCc = List("Joe Blow <mslinn@gmail.com>"),
     mailBcc = List("Jane Doe <mslinn@mslinn.com>"),

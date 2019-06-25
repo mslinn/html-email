@@ -1,6 +1,7 @@
 package com.micronautics
 
 import org.apache.commons.mail.{Email, HtmlEmail}
+import pureconfig.generic.auto._
 
 case class EMailConfig(smtp: Smtp)
 

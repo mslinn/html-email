@@ -2,7 +2,7 @@
 
 cancelable := true
 
-crossScalaVersions := Seq("2.11.11", scalaVersion.value)
+crossScalaVersions := Seq("2.11.11", "2.12.8", "2.13.0")
 
 // define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
 initialCommands in console := """
@@ -17,9 +17,9 @@ javacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.github.pureconfig" %% "pureconfig"    % "0.7.2"  withSources(),
+  "com.github.pureconfig" %% "pureconfig"    % "0.11.1" withSources(),
   "org.apache.commons"    %  "commons-email" % "1.5"    withSources(),
-  "org.scalatest"         %% "scalatest"     % "3.0.1"  % Test withSources(),
+  "org.scalatest"         %% "scalatest"     % "3.0.8"  % Test withSources(),
   "junit"                 %  "junit"         % "4.12"   % Test
 )
 
@@ -32,7 +32,7 @@ logLevel in compile := Level.Warn
 // Level.INFO is needed to see detailed output when running tests
 logLevel in test := Level.Info
 
-licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+licenses +=  ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
 name := "html-email"
 
@@ -47,24 +47,18 @@ scalacOptions ++= Seq(
   "-feature",
   "-target:jvm-1.8",
   "-unchecked",
-  "-Ywarn-adapted-args",
-  "-Ywarn-dead-code",
-  "-Ywarn-numeric-widen",
-  "-Ywarn-unused",
-  "-Ywarn-value-discard",
-  "-Xfuture",
   "-Xlint"
 )
 
 scalacOptions in (Compile, doc) ++= baseDirectory.map {
-  (bd: File) => Seq[String](
+  bd: File => Seq[String](
      "-sourcepath", bd.getAbsolutePath,
      "-doc-source-url", "https://github.com/mslinn/html-email/tree/master€{FILE_PATH}.scala"
   )
 }.value
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.13.0"
 
 sublimeTransitive := true
 
-version := "0.1.2"
+version := "0.2.0"
