@@ -13,7 +13,7 @@ Email addresses can be provided in the form `blah@gmail.com` or `Joe Blow <blah@
 ## Installation
 Add this to your project's `build.sbt`:
 
-    resolvers += "micronautics/scala on bintray" at "http://dl.bintray.com/micronautics/scala"
+    resolvers += "micronautics/scala on bintray" at "https://dl.bintray.com/micronautics/scala"
 
     libraryDependencies += "com.micronautics" %% "html-email" % "0.2.0" withSources()
 
