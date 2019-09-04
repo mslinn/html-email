@@ -61,4 +61,6 @@ scalaVersion := "2.13.0"
 
 sublimeTransitive := true
 
+ThisBuild / turbo := true
+
 version := "0.2.0"
