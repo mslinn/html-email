@@ -2,7 +2,7 @@
 
 cancelable := true
 
-crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.0")
+crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.1")
 
 // define the statements initially evaluated when entering 'console', 'console-quick', but not 'console-project'
 initialCommands in console := """
